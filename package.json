@@ -1,0 +1,26 @@
+{
+  "name": "CleanSV",
+  "version": "0.0.1",
+  "description": "Cleans CSV",
+  "main": "index.js",
+  "scripts": {
+    "test": "/test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:MRdNk/CleanSV.git"
+  },
+  "dependencies": {
+    "tryparse": "0.x.x"
+  },
+  "keywords": [
+    "csv",
+    "parser"
+  ],
+  "author": {
+    "name": "mrdnk"
+  },
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "readme": "Cleans CSV files"
+}
