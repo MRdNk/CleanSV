@@ -26,10 +26,8 @@ Row.prototype.parseToRow = function (data, delim, cb) {
     }
 
     var data;
-    // console.log(typeof that.noTrim !== 'undefined')
-    // console.log(that.noTrim.indexOf(that.columns[i]))
 
-    if(typeof that.noTrim !== 'undefined') {
+    if(that.noTrim !== null) { // && that.noTrim.isArray) {
       if(that.noTrim.indexOf(that.columns[i]) === -1) {
         data = array[i].trim()
       } else {
@@ -53,6 +51,8 @@ Row.prototype.parseToRow = function (data, delim, cb) {
 function cleansv (opts) {
 
   var that = this;
+	
+	var opts = opts || {}
 
   that.currentData = '';
   that.rows = [];
