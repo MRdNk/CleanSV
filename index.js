@@ -56,7 +56,7 @@ Row.prototype.parseToRow = function (data, delim, cb) {
 function cleansv (opts) {
 
   var that = this;
-	
+  
   var opts = opts || {}
 
   that.currentData = '';

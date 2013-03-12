@@ -13,14 +13,16 @@ cat myfile.csv | node CleanSV -f clean.csv
 
 Usage
 ```bash
-Usage: CleanSV.js [options]
+  Usage: CleanSV.js [options]
 
   Options:
 
-    -h, --help              output usage information
-    -V, --version           output the version number
-    -f, --filename [type]   filename to pipe to
-    -t, --noTrim <columns>  columns to not trim
+    -h, --help                   output usage information
+    -V, --version                output the version number
+    -f, --filename [type]        Filename to pipe into
+    --nt, --noTrim <columns>     Columns not to Trim
+    --od, --outputDelim [delim]  The output delimiter
+    --rq, --removeQuotes         Remove all quotes
 
 ```
 
