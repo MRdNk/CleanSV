@@ -11,7 +11,8 @@ function runtest (file) {
     headers: true,
     headersOut: true,
     outputArray: false,
-    noTrim: ['DAYS_OF_WEEK']
+    //noTrim: ['DAYS_OF_WEEK']
+		noTrim: ['C']
   };
 
   // console.log('opts: ', opts)
