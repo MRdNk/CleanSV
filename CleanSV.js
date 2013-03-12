@@ -16,6 +16,8 @@ function list (val) {
 var opts = {
 		delim: ','
 	,	headers: true
+	, outDelim: '|'
+	, removeQuotes: true
 }
 
 program
@@ -30,4 +32,3 @@ if (program.filename) {
 	}
 	process.stdin.pipe(CleanSV(opts)).pipe(fs.createWriteStream(program.filename))
 }
-

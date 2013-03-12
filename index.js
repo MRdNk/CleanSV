@@ -6,6 +6,8 @@ function Row (columns, opts) {
   this.data = '';
   this.noTrim = opts.noTrim || null;
   this.headersOut = opts.headersOut || null;
+  this.outDelim = opts.outDelim;
+  this.removeQuotes = opts.removeQuotes || false;
 
   return this;
 }
@@ -34,13 +36,16 @@ Row.prototype.parseToRow = function (data, delim, cb) {
         data = array[i]
       }
     } else {
-      data = array[i]
+      data = array[i].trim()
     }
 
     var val = tryParse.float(data) || tryParse.int(data) || data;
     //var separator = (i === array.length - 1) ? '' : ',';
     that.data += (val == data) ? val : data;
-    that.data += (i === array.length - 1) ? '' : ',';
+    that.data += (i === array.length - 1) ? '' : that.outDelim;
+
+    if (that.removeQuotes)
+      that.data = that.data.replace(/"/g,'').trim();
   }
 
 
@@ -52,13 +57,14 @@ function cleansv (opts) {
 
   var that = this;
 	
-	var opts = opts || {}
+  var opts = opts || {}
 
   that.currentData = '';
   that.rows = [];
   that.started = false;
   that.headers = opts.headers || false;
   that.outputArray = opts.outputArray || false;
+  that.outDelim = opts.outDelim || that.opts.delim;
 
   that.opts = opts || {};
   if (!that.opts.delim || that.opts.delim === ',') {
