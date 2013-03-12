@@ -46,3 +46,11 @@ Cat myfile.csv piped into CleanSV
 - The output filename is clean.csv (-f clean.csv)
 - We don't want to trim column B and C (-t B,C)
 
+
+The resulting output file (clean.csv)
+```bash
+A,B,C
+fred,XX,  X
+list,X   X,    X
+```
+
