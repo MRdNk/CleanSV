@@ -1,6 +1,10 @@
 CleanSV
 =======
 
+A nodejs module for cleaning up CSV files in a nice streaming parser.
+
+Trims white space, changes delimiter to another one, remove spaces. 
+
 Using the module: Bash / cmd
 ------------------------------
 
