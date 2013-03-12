@@ -1,6 +1,6 @@
-var fs = require('fs');
-var path = require('path');
-var cleansv = require('../index.js');
+var fs = require('fs')
+var path = require('path')
+var cleansv = require('../index.js')
 
 function runtest (file) {
 
@@ -13,11 +13,11 @@ function runtest (file) {
     outputArray: false,
     //noTrim: ['DAYS_OF_WEEK']
 		noTrim: ['C']
-  };
+  }
 
   // console.log('opts: ', opts)
 
-  fs.createReadStream(path.resolve(__dirname, file)).pipe(cleansv(opts)).pipe(fs.createWriteStream(path.resolve(__dirname, 'clean.csv')));
+  fs.createReadStream(path.resolve(__dirname, file)).pipe(cleansv(opts)).pipe(fs.createWriteStream(path.resolve(__dirname, 'clean.csv')))
 }
 
-module.exports = runtest;
+module.exports = runtest
