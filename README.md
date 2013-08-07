@@ -45,7 +45,7 @@ lisa  ,X   X,    X
 
 So ...
 ```bash
-cat myfile.csv | node CleanSV -f clean.csv -nt B,C
+cat myfile.csv | node CleanSV -f clean.csv --nt B,C
 ```
 
 Cat myfile.csv piped into CleanSV
