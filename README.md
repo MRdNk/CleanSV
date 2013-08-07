@@ -50,7 +50,7 @@ cat myfile.csv | node CleanSV -f clean.csv --nt B,C
 
 Cat myfile.csv piped into CleanSV
 - The output filename is clean.csv (-f clean.csv)
-- We don't want to trim column B and C (-nt B,C)
+- We don't want to trim column B and C (--nt B,C)
 
 
 The resulting output file (clean.csv)
