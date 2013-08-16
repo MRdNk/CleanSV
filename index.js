@@ -109,8 +109,6 @@ function cleansv (opts) {
       var i = 0
       var arr = that.currentData.split(that.lineEnding)
 
-      console.log(arr)
-
       // if the first line is headers has been set
       if (that.headers && that.started === false) {
         that.opts.columns = arr[0].split(that.opts.delim)
