@@ -67,7 +67,7 @@ function cleansv (opts) {
 
   that.opts = opts || {}
   if (!that.opts.delim || that.opts.delim === ',') {
-    that.opts.delim = /,(?!(?:[^",]|[^"],[^"])+")/
+    that.opts.delim = /,(?!(?:[^",]|[^"],[^",])+")/
   }
   if (that.opts.delim === '\t') {
     that.opts.delim = '\\t'
@@ -108,6 +108,8 @@ function cleansv (opts) {
     if(that.currentData.indexOf(that.lineEnding) !== -1) {
       var i = 0
       var arr = that.currentData.split(that.lineEnding)
+
+      console.log(arr)
 
       // if the first line is headers has been set
       if (that.headers && that.started === false) {

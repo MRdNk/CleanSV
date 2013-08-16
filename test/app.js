@@ -5,14 +5,16 @@ var cleansv = require('../index.js')
 function runtest (file) {
 
   var opts = {
-    // delim : '\t'
+    outDelim: '|',
+    removeQuotes: true
+   /* // delim : '\t'
     delim : ',',
     columns: ['Column1', 'Column2', 'Column3'],
     headers: true,
     headersOut: true,
     outputArray: false,
     //noTrim: ['DAYS_OF_WEEK']
-		noTrim: ['C']
+		noTrim: ['C']*/
   }
 
   // console.log('opts: ', opts)

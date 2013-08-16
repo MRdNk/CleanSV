@@ -1,1 +1,1 @@
-require('./app.js')('example.csv')
+require('./app.js')('t1.csv')
